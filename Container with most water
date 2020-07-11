@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n; 
+    cin>>n;
+    while(n--)
+    {
+        int l;
+        cin>>l;
+        int a[l];
+        for(int i=0; i<l; i++)
+            cin>>a[i];
+            
+        int area=0,max_area=0;
+        for(int i=0;i<l;i++)
+        {
+            for(int j=i+1;j<l;j++)
+            {
+                area=(j-i)*min(a[i],a[j]);
+                if(area>max_area)
+                    max_area=area;
+            }
+        }
+        cout<<max_area<<endl;
+    }
+
+	return 0;
+}
