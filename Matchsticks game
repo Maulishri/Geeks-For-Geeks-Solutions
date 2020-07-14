@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    cin>>n;
+    while(n>0)
+    {
+        long long l;
+        cin>>l;
+        int ans=l%5;
+        if(ans==0)
+            cout<<"-1"<<endl;
+        else
+            cout<<ans<<endl;
+        n--;
+    }
+	//code
+	return 0;
+}
