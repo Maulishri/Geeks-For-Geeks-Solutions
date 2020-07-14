@@ -1,24 +1,64 @@
-#include <iostream>
-using namespace std;
+// { Driver Code Starts
+#include <bits/stdc++.h> 
+using namespace std; 
 
-int main() {
+struct Node
+{
+    int data;
+    struct Node* next;
     
-    int l;
-    cin>>l;
-    while(l>0)
+    Node(int x){
+        data = x;
+        next = NULL;
+    }
+};
+
+int getCount(struct Node* head);
+
+int main() 
+{ 
+    int t;
+    cin>>t;
+    while(t--)
     {
         int n;
         cin>>n;
-        int a[n][n];
-        for(int i=0; i<n; i++)
-            for(int j=0; j<n; j++)
-                cin>>a[i][j];
-        for(int i=0; i<n; i++)
-            for(int j=n-1; j>=0; j--)
-                cout<<a[j][i]<<" ";
-        cout<<endl;
-        l--;
+
+        int data;
+        cin>>data;
+        struct Node *head = new Node(data);
+        struct Node *tail = head;
+        for (int i = 0; i < n-1; ++i)
+        {
+            cin>>data;
+            tail->next = new Node(data);
+            tail = tail->next;
+        }
+        cout << getCount(head) << endl;
     }
-	//code
-	return 0;
+    return 0;
+}// } Driver Code Ends
+
+
+/* Link list node */
+/*struct Node
+{
+    int data;
+    Node* next;
+    Node(int x) {  data = x;  next = NULL; }
+}; */
+
+// head : reference to head of linked list
+int getCount(struct Node* head){
+
+    //Code here
+    struct Node *current= head;
+    int count=0;
+    while(current!=NULL)
+    {
+        count++;
+        current= current->next;
+    }
+    return count;
+
 }
