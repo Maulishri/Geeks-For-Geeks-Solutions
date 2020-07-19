@@ -1,0 +1,33 @@
+#include<iostream>
+#include<string.h>
+
+using namespace std;
+
+int str2dec(string s)
+{
+    int pro=1; 
+    int sum=0;
+    for(int i=s.length()-1;i>=0;i--)
+    {
+        if(s[i]=='1')
+            sum=sum+pro;
+        pro=pro*2;
+    }
+    return sum;
+}
+
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        string s1, s2 ;
+        cin>>s1>>s2;
+        int a=str2dec(s1);
+        int b=str2dec(s2);
+        cout<<a*b<<endl; 
+         }
+         return 0;
+}
+
