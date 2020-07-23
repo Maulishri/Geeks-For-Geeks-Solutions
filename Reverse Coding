@@ -1,0 +1,21 @@
+#include<iostream>
+using namespace std;
+int main()
+ {
+     int n;
+     cin>>n;
+     while(n--)
+     {
+         int l,m;
+         cin>>l>>m;
+         int sum=0;
+         for(int i=1; i<=l; i++)
+            sum+= i;
+        if(sum==m)
+            cout<<"1"<<endl;
+        else
+            cout<<"0"<<endl;
+     }
+	//code
+	return 0;
+}
