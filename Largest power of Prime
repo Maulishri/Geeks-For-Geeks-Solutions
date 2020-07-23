@@ -1,0 +1,24 @@
+#include<iostream>
+using namespace std;
+int main()
+ {
+     int n;
+     cin>>n;
+     while(n--)
+     {
+         int l,m,c=0;
+         cin>>l>>m;
+        
+        while(l!=0)
+        {
+            l=l/m;
+            c+=l;
+    
+        }
+        cout<<c<<endl;
+     }
+	//code
+
+	
+	return 0;
+}
