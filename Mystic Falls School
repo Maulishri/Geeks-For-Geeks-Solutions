@@ -1,0 +1,16 @@
+#include<iostream>
+using namespace std;
+int main()
+ {
+     int n;
+     cin>>n;
+     while(n--)
+     {
+         int l,m;
+         cin>>l>>m;
+         int s= m-l-1;
+         cout<<s<<endl;
+     }
+	//code
+	return 0;
+}
