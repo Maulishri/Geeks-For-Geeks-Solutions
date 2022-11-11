@@ -1,2 +1,3 @@
 # Geeks-For-Geeks-Solutions
-Geeks for Geeks Solutions
+
+My solutions to a bunch of questions on Geeks for Geeks (DSA practice)
